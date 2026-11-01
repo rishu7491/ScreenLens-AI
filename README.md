@@ -1,26 +1,42 @@
 <div align="center">
 
-# 👁️ ScreenLens AI
-### *The Stealth Floating Copilot That Sees Your Screen & Solves Anything in 3 Seconds.*
+# 🔍 ScreenLens AI ⚡
 
-[![Python Version](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://python.org)
-[![Model](https://img.shields.io/badge/Vision%20Model-NVIDIA%20Nemotron%20120B-76B900?logo=nvidia&logoColor=white)](https://build.nvidia.com)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![GitHub Stars](https://img.shields.io/github/stars/rishu7491/ScreenLens-AI?style=social)](https://github.com/rishu7491/ScreenLens-AI)
+### *The Ultra-Fast Floating Vision Copilot for Students, Coders & Researchers*
 
-**ScreenLens AI** is an ultra-fast, non-intrusive desktop overlay that captures active questions, MCQs, or complex coding problems from your screen and instantly displays the structured answer in a floating, adaptive card.
+[![GitHub Stars](https://img.shields.io/github/stars/rishu7491/ScreenLens-AI?style=for-the-badge&color=yellow)](https://github.com/rishu7491/ScreenLens-AI/stargazers)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![Python: 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Model: NVIDIA Nemotron](https://img.shields.io/badge/Vision_AI-NVIDIA_Nemotron_3.5-76B900?style=for-the-badge&logo=nvidia&logoColor=white)](https://build.nvidia.com/)
+[![Platform: Windows](https://img.shields.io/badge/Platform-Windows_10%20%2F%2011-0078D6?style=for-the-badge&logo=windows&logoColor=white)](https://microsoft.com/windows)
 
-[Quick Start](#-quick-start) • [Features](#-key-features) • [Controls](#-controls--shortcuts) • [Architecture](#-how-it-works)
+<p align="center">
+  <b>A stealth, lightweight floating AI widget that reads any question, MCQ, or coding problem directly from your screen and delivers accurate answers in under 3.5 seconds.</b>
+</p>
+
+[Quick Start](#-quick-start) • [Features](#-key-features) • [Controls](#-controls--shortcuts) • [Architecture](#-how-it-works) • [License](#-license)
 
 </div>
 
 ---
 
-## 📸 Real-World Interface
+## 💡 Why ScreenLens AI?
+
+Most AI tools require you to take a manual screenshot, open a browser, paste the image into ChatGPT, and wait 15 seconds. 
+
+**ScreenLens AI cuts that down to 1 click or 1 keystroke (`Ctrl+Q`):**
+1. Sees the question directly on your screen (even in hardware-accelerated browsers & PDFs).
+2. Uses NVIDIA's ultra-fast multimodal vision model.
+3. Automatically breaks the output into a **Question Box (Top)** and **Answer/Code Box (Bottom)**.
+4. Auto-expands for complex multi-line code or stays compact for quick MCQs.
+
+---
+
+## 🖥️ Live Interface Preview
 
 ```text
 ┌────────────────────────────────────────────────────────┐
-│  SCREENLENS AI                                  [DONE] │
+│  AI ASSISTANT                                   [DONE] │
 │                                                        │
 │  QUESTION DETECTED:                                    │
 │ ┌────────────────────────────────────────────────────┐ │
@@ -40,20 +56,21 @@
 
 ---
 
-## 🚀 Key Features
+## ✨ Key Features
 
-* **Two-Tier Visual QA:**
-  * 📌 **Question Box (Top):** Shows the exact question extracted by AI to confirm detection accuracy.
-  * 💡 **Answer Box (Bottom):** Shows the verified option letter + full option text, or production-ready code.
-* **Auto-Adaptive Sizing:** Compact for short MCQs, smoothly auto-expands downwards for multi-line coding questions and subjective answers.
-* **High-Definition Vision (1280px):** Win32 `CAPTUREBLT` engine captures hardware-accelerated browsers and dense exam fonts with zero blurring.
-* **One-Click Clipboard Copy:** Instant `[📋 Copy]` button to copy code solutions or text answers.
-* **Smart Auto-Loop Mode:** Monitors your screen continuously and only triggers when a new question appears (perceptual change detection prevents redundant API calls).
-* **Universal Non-Admin Hotkeys:** Powered by `pynput` global hooks — works on any Windows PC without requiring "Run as Administrator".
+- **🎯 Two-Tier View (Verification First):**
+  - **Question Box (Top):** Confirms exactly what the AI read from your screen.
+  - **Answer Box (Bottom):** Shows the solution with high contrast and monospace font for code.
+- **⚡ 3-Second Response Time:** Powered by NVIDIA's `nemotron-3.5-super-vl-120b-a12b` optimized with lightweight 1280px compression.
+- **📐 Adaptive Dynamic Sizing:** Compact for short MCQs, auto-expands downward for multi-line Python, C++, or Java code solutions.
+- **📋 One-Click Copy:** Click `[📋 Copy]` to instantly transfer answers or code to your clipboard.
+- **🔄 Hands-Free Auto-Loop:** Press `Ctrl+L` or click `[Loop]` to monitor your screen. Perceptual diff hashing prevents redundant API calls until a new question appears.
+- **👻 Non-Intrusive Floating Window:** Topmost translucent design that stays visible over browsers, PDFs, and coding IDEs. Drag anywhere on screen.
+- **🔒 Zero Admin Rights Needed:** Runs smoothly using non-elevated user-level global hooks (`pynput`).
 
 ---
 
-## ⚡ Quick Start (Ready in 2 Minutes)
+## 🚀 Quick Start
 
 ### 1. Clone the Repository
 ```bash
@@ -61,20 +78,20 @@ git clone https://github.com/rishu7491/ScreenLens-AI.git
 cd ScreenLens-AI
 ```
 
-### 2. Install Dependencies
+### 2. Install Requirements
 ```bash
 pip install -r requirements.txt
 ```
 
 ### 3. Add Free API Key
-Open `config.py` and set your **NVIDIA NIM API Key**:
+Open `config.py` and paste your free **NVIDIA NIM API Key**:
 ```python
 NVIDIA_API_KEY = "YOUR_NVIDIA_API_KEY_HERE"
 ```
-> 💡 *Don't have a key? Get one for free with 1,000 free credits at [build.nvidia.com](https://build.nvidia.com/).*
+> 🎁 **Tip:** Get a 100% free API key with free credits at [build.nvidia.com](https://build.nvidia.com/).
 
-### 4. Launch
-Double-click **`START.bat`** or run:
+### 4. Run the Copilot
+Double-click **`START.bat`** or execute:
 ```bash
 python answer_bubble.py
 ```
@@ -87,26 +104,29 @@ python answer_bubble.py
 |---|---|---|
 | **Scan & Solve** | Click `[📸 Scan Now]` | `Ctrl + Q` |
 | **Auto-Loop Toggle** | Click `[🔄 Loop: OFF/ON]` | `Ctrl + L` |
-| **Copy Answer** | Click `[📋 Copy]` | — |
-| **Hide / Show** | Click `[✕]` | `Ctrl + H` |
-| **Move Card** | Click & drag header with mouse | — |
+| **Copy to Clipboard** | Click `[📋 Copy]` | — |
+| **Hide / Show Window** | Click `[✕]` | `Ctrl + H` |
+| **Reposition** | Click & drag window header | — |
 | **Exit App** | — | `Ctrl + Shift + X` |
 
 ---
 
-## 🧠 How It Works
+## 🔬 How It Works (Technical Architecture)
 
 ```
-[ Active Screen ]
-       │
-       ▼
-[ Win32 CAPTUREBLT Engine ] ──► [ Perceptual Fingerprint (32x32) ]
-       │                                     │
-       ▼ (If Changed)                        ▼ (If Static)
-[ NVIDIA Nemotron 120B VLM ]            [ Skip API Call ]
-       │
-       ▼
-[ Thread-Safe UI Queue ] ──► [ Adaptive Two-Tier Floating Card ]
+[ Active Display Screen ]
+          │
+          ▼
+[ Win32 CAPTUREBLT Engine ] ──► Captures hardware-accelerated DWM surface
+          │
+          ▼
+[ 32x32 Perceptual Hashing ] ──► Skips static screens (Saves API tokens)
+          │
+          ▼
+[ NVIDIA Nemotron Vision API ] ──► 1280px high-contrast inference
+          │
+          ▼
+[ Thread-Safe UI Queue ] ──► Renders Question & Answer without GUI freeze
 ```
 
 ---
@@ -116,10 +136,11 @@ python answer_bubble.py
 Contributions, issues, and feature requests are welcome!
 Feel free to check the [issues page](https://github.com/rishu7491/ScreenLens-AI/issues).
 
-⭐ **If you find ScreenLens AI useful, please give it a Star on GitHub!** It helps the project reach more learners and developers.
+### ⭐ Support the Project
+If you find ScreenLens AI helpful, please consider giving it a **Star ⭐** on GitHub! It helps more developers and students discover this open-source tool.
 
 ---
 
 ## 📄 License
 
-Distributed under the **MIT License**. See `LICENSE` for more information.
+This project is licensed under the [MIT License](LICENSE) - see the LICENSE file for details.

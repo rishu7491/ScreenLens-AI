@@ -282,7 +282,7 @@ class AdaptiveBubbleApp:
 
         self.title_label = tk.Label(
             self.header_frame,
-            text="SCREENLENS AI",
+            text="AI ASSISTANT",
             font=("Segoe UI", 9, "bold"),
             fg="#60A5FA",
             bg="#0B0F19"
@@ -607,7 +607,7 @@ def setup_global_hotkeys(app: AdaptiveBubbleApp):
 
 def start_app():
     print("=" * 60)
-    print("  SCREENLENS AI - STEALTH MULTIMODAL COPILOT")
+    print("  AI ANSWER BUBBLE - ADAPTIVE QA EDITION")
     print("=" * 60)
     print("  * [Scan Now] ya [Ctrl + Q] : Screen Scan & Solve")
     print("  * [Loop]     ya [Ctrl + L] : Auto-Loop Mode")
