@@ -1,8 +1,8 @@
 @echo off
-title AI Answer Bubble
+title ScreenLens AI - Stealth Desktop Copilot
 cls
 echo ========================================================
-echo               AI ANSWER BUBBLE (ACTIVE)
+echo              SCREENLENS AI (ACTIVE)
 echo ========================================================
 echo.
 echo   * Click [Scan Now] ya [Ctrl + Q] : Instant Answer

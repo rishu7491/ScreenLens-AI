@@ -1,27 +1,26 @@
-# AI Answer Bubble 🫧
+<div align="center">
 
-An intelligent, non-intrusive floating desktop assistant that reads questions, MCQs, or code directly from your screen and provides instant answers in a sleek, adaptive floating bubble.
+# 👁️ ScreenLens AI
+### *The Stealth Floating Copilot That Sees Your Screen & Solves Anything in 3 Seconds.*
+
+[![Python Version](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://python.org)
+[![Model](https://img.shields.io/badge/Vision%20Model-NVIDIA%20Nemotron%20120B-76B900?logo=nvidia&logoColor=white)](https://build.nvidia.com)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![GitHub Stars](https://img.shields.io/github/stars/rishu7491/ScreenLens-AI?style=social)](https://github.com/rishu7491/ScreenLens-AI)
+
+**ScreenLens AI** is an ultra-fast, non-intrusive desktop overlay that captures active questions, MCQs, or complex coding problems from your screen and instantly displays the structured answer in a floating, adaptive card.
+
+[Quick Start](#-quick-start) • [Features](#-key-features) • [Controls](#-controls--shortcuts) • [Architecture](#-how-it-works)
+
+</div>
 
 ---
 
-## ✨ Features
-
-- **Two-Tier Visual Layout:**
-  - 📌 **Question Box (Top):** Shows the exact question detected on screen.
-  - 💡 **Answer Box (Bottom):** Shows the solution, correct option, or complete working code snippet.
-- **Dynamic Auto-Resizing:** Compact for short MCQs, automatically expands downwards for complex coding problems and subjective answers.
-- **High-Definition Vision:** 1280px screen capture engine powered by **NVIDIA Nemotron 3.5 Super VL**, capable of reading small fonts and dense exam layouts.
-- **One-Click Copy:** Built-in `[📋 Copy]` button to instantly copy code or answers to your clipboard.
-- **Hands-Free Auto-Loop Mode:** Monitors your screen automatically and updates only when a new question appears (perceptual change detection prevents redundant calls).
-- **Stealth & Draggable:** Floating card with subtle transparency that stays on top and can be dragged anywhere.
-
----
-
-## 🖥️ UI Preview
+## 📸 Real-World Interface
 
 ```text
 ┌────────────────────────────────────────────────────────┐
-│  AI ASSISTANT                                   [DONE] │
+│  SCREENLENS AI                                  [DONE] │
 │                                                        │
 │  QUESTION DETECTED:                                    │
 │ ┌────────────────────────────────────────────────────┐ │
@@ -41,12 +40,25 @@ An intelligent, non-intrusive floating desktop assistant that reads questions, M
 
 ---
 
-## 🚀 Quick Start (Setup in 2 Minutes)
+## 🚀 Key Features
+
+* **Two-Tier Visual QA:**
+  * 📌 **Question Box (Top):** Shows the exact question extracted by AI to confirm detection accuracy.
+  * 💡 **Answer Box (Bottom):** Shows the verified option letter + full option text, or production-ready code.
+* **Auto-Adaptive Sizing:** Compact for short MCQs, smoothly auto-expands downwards for multi-line coding questions and subjective answers.
+* **High-Definition Vision (1280px):** Win32 `CAPTUREBLT` engine captures hardware-accelerated browsers and dense exam fonts with zero blurring.
+* **One-Click Clipboard Copy:** Instant `[📋 Copy]` button to copy code solutions or text answers.
+* **Smart Auto-Loop Mode:** Monitors your screen continuously and only triggers when a new question appears (perceptual change detection prevents redundant API calls).
+* **Universal Non-Admin Hotkeys:** Powered by `pynput` global hooks — works on any Windows PC without requiring "Run as Administrator".
+
+---
+
+## ⚡ Quick Start (Ready in 2 Minutes)
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/rishu7491/ai-answer-bubble.git
-cd ai-answer-bubble
+git clone https://github.com/rishu7491/ScreenLens-AI.git
+cd ScreenLens-AI
 ```
 
 ### 2. Install Dependencies
@@ -54,14 +66,14 @@ cd ai-answer-bubble
 pip install -r requirements.txt
 ```
 
-### 3. Add your API Key
-Open `config.py` and paste your free **NVIDIA NIM API Key**:
+### 3. Add Free API Key
+Open `config.py` and set your **NVIDIA NIM API Key**:
 ```python
 NVIDIA_API_KEY = "YOUR_NVIDIA_API_KEY_HERE"
 ```
-*(Get a free key at [build.nvidia.com](https://build.nvidia.com/))*
+> 💡 *Don't have a key? Get one for free with 1,000 free credits at [build.nvidia.com](https://build.nvidia.com/).*
 
-### 4. Run
+### 4. Launch
 Double-click **`START.bat`** or run:
 ```bash
 python answer_bubble.py
@@ -77,21 +89,37 @@ python answer_bubble.py
 | **Auto-Loop Toggle** | Click `[🔄 Loop: OFF/ON]` | `Ctrl + L` |
 | **Copy Answer** | Click `[📋 Copy]` | — |
 | **Hide / Show** | Click `[✕]` | `Ctrl + H` |
-| **Move Bubble** | Drag header with mouse | — |
+| **Move Card** | Click & drag header with mouse | — |
 | **Exit App** | — | `Ctrl + Shift + X` |
 
 ---
 
-## 🛠️ Tech Stack
+## 🧠 How It Works
 
-- **Python 3.10+**
-- **GUI:** Tkinter (Thread-safe queue architecture, custom modern dark theme)
-- **Vision AI:** NVIDIA Nemotron-3.5-Super-VL-120B via NIM API
-- **Screen Engine:** Win32 GDI with `CAPTUREBLT` for hardware-accelerated windows + perceptual difference hashing
-- **Hotkeys:** Pynput (Universal global hook, no admin rights required)
+```
+[ Active Screen ]
+       │
+       ▼
+[ Win32 CAPTUREBLT Engine ] ──► [ Perceptual Fingerprint (32x32) ]
+       │                                     │
+       ▼ (If Changed)                        ▼ (If Static)
+[ NVIDIA Nemotron 120B VLM ]            [ Skip API Call ]
+       │
+       ▼
+[ Thread-Safe UI Queue ] ──► [ Adaptive Two-Tier Floating Card ]
+```
+
+---
+
+## 🤝 Contributing & Community
+
+Contributions, issues, and feature requests are welcome!
+Feel free to check the [issues page](https://github.com/rishu7491/ScreenLens-AI/issues).
+
+⭐ **If you find ScreenLens AI useful, please give it a Star on GitHub!** It helps the project reach more learners and developers.
 
 ---
 
 ## 📄 License
 
-MIT License. Free to use and modify for learning and productivity.
+Distributed under the **MIT License**. See `LICENSE` for more information.
