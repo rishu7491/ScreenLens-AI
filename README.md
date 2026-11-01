@@ -14,6 +14,10 @@
   <b>A stealth, lightweight floating AI widget that reads any question, MCQ, or coding problem directly from your screen and delivers accurate answers in under 3.5 seconds.</b>
 </p>
 
+<p align="center">
+  <img src="assets/demo.gif" alt="ScreenLens AI Live Demo" width="860" style="border-radius: 8px; border: 1px solid #334155;" />
+</p>
+
 [Quick Start](#-quick-start) • [Features](#-key-features) • [Controls](#-controls--shortcuts) • [Architecture](#-how-it-works) • [License](#-license)
 
 </div>
